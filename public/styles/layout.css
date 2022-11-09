@@ -89,6 +89,7 @@ nav {
 
 .tweet-container{
   display: flex;
+   border: 5px solid #35332f;
   flex-direction: column;
   border: 1px solid black;
   margin:5% 0% 5% 0%;
@@ -99,7 +100,7 @@ nav {
 margin-left: 5%;
 }
 .tweet-container > article header{
-  border: 1px solid red;
+ 
   height: auto;
   word-wrap:normal;
   display: flex;
