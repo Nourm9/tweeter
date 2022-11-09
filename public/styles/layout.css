@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -16,9 +18,126 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #e3dacf;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
   font-size: 24px;
+  font-family: Source Sans Pro;
+  
 }
+
+nav {
+  font-family: Bungee;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid red;
+  width: auto;
+}
+.container{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left:15%;
+
+  margin-top:0px;
+
+}
+.container > p {
+ 
+  padding-top:-5px;
+  margin-top: -5px;
+}
+
+.tweet-form{
+  
+  width:60vw;
+  display: flex;
+  flex-direction: column;
+}
+.tweet-form > textarea {
+  background-color:rgba(255, 0, 0, 0) ;
+  border: none;
+  border-bottom: 3px solid #4056A1;
+  resize: none;
+}
+.tweet-form-bottom{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1% 3% 1% 3%;
+}
+
+.tweet-form-bottom > button {
+  background-color: #4056A1;
+  color: white;
+  width: 12%;
+  height: auto;
+  justify-items: center;  
+  padding: 0;
+  border: none;
+  font-family: Bungee;
+  font-size: 1.5rem;
+  padding: 1% 0% 1% 0%;
+
+}
+
+.tweet-container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin:5% 0% 5% 0%;
+  width: 100vh;
+  box-shadow:5px 5px #5451497e;
+}
+.tweet-container>article p{
+margin-left: 5%;
+}
+.tweet-container > article header{
+  border: 1px solid red;
+  height: auto;
+  word-wrap:normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left:1%;
+}
+
+
+.tweet-container > article footer{
+  border-top: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:1%;
+  font-size: 15px;
+}
+
+.tweet-footer>span{
+  margin-left: 2%;
+  margin-right:2%;
+}
+
+.tweet-container > article button {
+  color:#4056A1;
+  border: none;
+  width: 2vw;
+  background: none; 
+
+}
+
+.tweet-container > article button :hover{
+  color: yellow;
+  
+ 
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

@@ -1,0 +1,36 @@
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  height: 100px;
+  width:100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+nav > span {
+  font-size: 56px;
+  align-self: center ;
+  font-family:Bungee; 
+  padding-left:1.5em;
+  padding-right:1.5em;
+
+}
+.sub-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right:15em;
+
+}
+
+.sub-container > span {
+  font-size: 30px;
+}
+
+.sub-container > output {
+  font-family: Bungee;
+  font-size:10rem;
+}

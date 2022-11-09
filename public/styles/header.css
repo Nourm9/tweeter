@@ -1,0 +1,8 @@
+header{
+  height: 500px;
+  word-wrap: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
