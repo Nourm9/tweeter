@@ -31,7 +31,8 @@ const onSubmit = function (event) {
     data: formData,
   }).then(() => {
     loadTweets();
-console.log("success");
+    $(".tweet-form")[0].reset();; //resets text-form after loading tweets
+    console.log("success");
   // $.ajax({
   //   type: "GET",
   //   url: "http://localhost:8080/",
@@ -46,7 +47,15 @@ console.log("success");
 
 
 const createTweetElement = (data) => {
-  const $tweet = $(`
+  // XSS implementation 
+  const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+  };
+  const safeHTML = `<p>${escape(data.content.text)}</p>`;
+// generates tweet data for outputed tweets section
+  const $tweet =$(`
      <article class = "tweet-article">
     <header class="tweet-header"> 
     <div class="tweet-name-img"> 
@@ -55,7 +64,7 @@ const createTweetElement = (data) => {
     </div>
       <span class="tweet-handle">${data.user.handle}</span>
     </header>
-    <p class="text-field">${data.content.text}</p>
+    <p class="text-field">${safeHTML}</p>
   <footer class="tweet-footer">
     <span class="tweet-date">${data.user.created_at}</span> 
     <span>
@@ -89,7 +98,7 @@ const renderTweets = function (tweets) {
     }).then((data) => {
       // it will remove the tweet container object elements and before rendwering new tweets
       $(".tweet-article").remove();
-      $(".text-field").empty();
+      
       renderTweets(data);
     })
   };
