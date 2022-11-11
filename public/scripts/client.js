@@ -13,16 +13,26 @@ const onSubmit = function (event) {
   event.preventDefault();
   const textValue = $("#count").val();
   const formData = $(this).serialize();
+  const errorMssg1 = "There are no characters, please write in the tweet box.";
+  const errorMssg2 = "You wrote too much. Please keep your characters under 140.";
+
 
   console.log($("#count"));
   if (textValue === null || textValue === "") {
-    console.log("please input text");
-    return alert("please input text");
+    
+    $(".error")
+      .html(
+        `<p><i class="fa-solid fa-triangle-exclamation"></i>${errorMssg1}<i class="fa-solid fa-triangle-exclamation"></i></p>`
+      )
+      .show();
   }
 
   if (textValue.length > 140) {
-    console.log("too many char");
-    return alert("You have too many characters");
+     $(".error")
+       .html(
+         `<p><i class="fa-solid fa-triangle-exclamation"></i>${errorMssg2}<i class="fa-solid fa-triangle-exclamation"></i></p>`
+       )
+       .show();
   }
  
   $.ajax({

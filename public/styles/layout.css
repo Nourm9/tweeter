@@ -5,6 +5,8 @@
  */
 html {
   box-sizing: border-box;
+  font-size: 16px;
+
 }
 *,
 *:before,
@@ -144,6 +146,17 @@ margin-left: 5%;
   flex-direction: column;
 }
 
+.error{
+color:red;
+text-align: center;
+border:2px solid red;
+width: 90%;
+display: none;
+font-size: 2rem;
+
+
+
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
