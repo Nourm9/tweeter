@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function () {
+$(document).ready(function () { //page can't be manipulated until the document is ready. 
   $(".tweet-form").on("submit", onSubmit);
   loadTweets();
 });
@@ -43,6 +43,7 @@ const onSubmit = function (event) {
     loadTweets();
     $(".tweet-form")[0].reset();; //resets text-form after loading tweets
     console.log("success");
+
   // $.ajax({
   //   type: "GET",
   //   url: "http://localhost:8080/",
@@ -95,8 +96,9 @@ const renderTweets = function (tweets) {
 
   for (let tweet of tweets) {
     const element = createTweetElement(tweet);
-    $(".tweet-container").append(element);
+    $(".tweet-container").prepend(element);
   }
+
 };
 
 

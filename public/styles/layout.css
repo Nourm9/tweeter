@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-
 }
 *,
 *:before,
@@ -18,13 +17,13 @@ html {
  * Global layout stuff
  */
 
+
 body {
   color: #545149;
   background-color: #e3dacf;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: Source Sans Pro;
-  
 }
 
 nav {
@@ -38,125 +37,176 @@ nav {
   border: 1px solid red;
   width: auto;
 }
-.container{
-  width: 70%;
+.container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left:15%;
+  margin-left: 15%;
 
-  margin-top:0px;
-
+  margin-top: 0px;
 }
 .container > p {
- 
-  padding-top:-5px;
+  padding-top: -5px;
   margin-top: -5px;
 }
-
-.tweet-form{
-  
-  width:60vw;
+.new-tweet{
+  margin-top:5%;
+}
+.tweet-container {
   display: flex;
-  flex-direction: column;
-}
-.tweet-form > textarea {
-  background-color:rgba(255, 0, 0, 0) ;
-  border: none;
-  border-bottom: 3px solid #4056A1;
-  resize: none;
-}
-.tweet-form-bottom{
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 1% 3% 1% 3%;
-}
-
-.tweet-form-bottom > button {
-  background-color: #4056A1;
-  color: white;
-  width: 12%;
-  height: auto;
-  justify-items: center;  
-  padding: 0;
-  border: none;
-  font-family: Bungee;
-  font-size: 1.5rem;
-  padding: 1% 0% 1% 0%;
-
-}
-
-.tweet-container{
-  display: flex;
-   border: 5px solid #35332f;
+  border: 5px solid #35332f;
   flex-direction: column;
   border: 1px solid black;
-  margin:5% 0% 10% 0%;
-  width: 100vh;
-  box-shadow:5px 5px #5451497e;
+  margin: 5% 10% 10% 10%;
+  width: 50vh;
+  box-shadow: 5px 5px #5451497e;
 }
-.tweet-container>article p{
-margin-left: 5%;
+.tweet-container > article p {
+  margin-left: 5%;
 }
-.tweet-container > article header{
- 
+.tweet-container > article header {
   height: auto;
-  word-wrap:normal;
+  word-wrap: normal;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left:1%;
+  margin-left: 1%;
 }
 
-
-.tweet-container > article footer{
+.tweet-container > article footer {
   border-top: 3px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin:1%;
+  margin: 1%;
   margin-bottom: 15%;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
-.tweet-footer>span{
+.tweet-footer > span {
   margin-left: 2%;
-  margin-right:2%;
+  margin-right: 2%;
 }
 
 .tweet-container > article button {
-  color:#4056A1;
+  color: #4056a1;
   border: none;
   width: 2vw;
-  background: none; 
-
+  background: none;
 }
 
-.tweet-container > article button :hover{
+.tweet-container > article button :hover {
   color: yellow;
-  
- 
 }
-.tweet-name-img{
+.tweet-name-img {
   display: flex;
   flex-direction: column;
 }
 
-.error{
-color:red;
-text-align: center;
-border:2px solid red;
-width: 90%;
-display: none;
-font-size: 2rem;
-
-
-
+.error {
+  color: red;
+  text-align: center;
+  border: 2px solid red;
+  width: 90%;
+  display: none;
+  font-size: 2rem;
 }
+
+@media only screen and (min-width: 1024px) {
+  /* Write Tablet only CSS here */
+  html{
+    resize: both;
+  }
+  .tweet-form {
+    margin-left: 15%;
+    margin-right: 25%;
+  }
+  .container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    margin-top: 0%;
+  }
+  .tweet-container {
+    margin: 5% 0% 10% 15%;
+    width: 120vh;
+  }
+ .tweet-form-header{
+  margin-top:15%;
+  margin-left:50%
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ 
+  nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  height: 10vh;
+  width:100vw;
+  background-color: #4057a1fd;
+  color: #ffffff;
+}
+
+  .nav-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  height: 15vh;
+  width:100vw;
+  background-color: #4057a1fd;
+  color: #ffffff;
+  }
+
+  .nav-container > span{
+    font-size: 1.4rem;
+  }
+  .sub-container  {
+  font-size: 1.4rem;
+}
+    .tweet-form {
+    margin-left: 20%;
+    margin-right: 25%;
+  }
+  .container {
+    width: 100vw;
+    border:5px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: -15%;
+
+    margin-top: 0%;
+  }
+  
+  .tweet-container {
+  display: flex;
+  border: 5px solid #35332f;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 5% -20% 20% 20%;
+  width: 50vh;
+  box-shadow: 5px 5px #5451497e;
+}
+.tweet-form-header{
+  margin-top:25%;
+  margin-left:25%
+}
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
