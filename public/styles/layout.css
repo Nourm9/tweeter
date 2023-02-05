@@ -117,7 +117,7 @@ nav {
 
 @media only screen and (min-width: 1024px) {
   /* Write Tablet only CSS here */
-  html{
+    html{
     resize: both;
   }
   .tweet-form {
@@ -143,13 +143,19 @@ nav {
   margin-top:15%;
   margin-left:50%
 }
+.tweet-form > textarea {
+  height:25vh;
+  width: 50vw;
+}
+.error{
+  margin-top:5%;
+}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
  
   nav{
-    font-size:1rem;
-  display: flex;
+  font-size:1rem;
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
@@ -181,6 +187,7 @@ nav {
     margin-left: 20%;
     margin-right: 25%;
   }
+  
   .container {
     width: 100vw;
     display: flex;

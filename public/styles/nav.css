@@ -15,7 +15,7 @@ nav{
 }
 
 nav > span {
-  font-size: 2em;
+  font-size: 1.3em;
   align-self: center ;
   font-family:Bungee; 
   padding-left:1.5em;
@@ -32,7 +32,7 @@ nav > span {
 }
 
 .sub-container > span {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .sub-container > output {
