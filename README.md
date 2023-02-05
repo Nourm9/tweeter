@@ -13,8 +13,8 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Screenshots
-!["Screenshot of URLs page"](https://github.com/Nourm9/tweeter/blob/master/docs/tweeter-desktop.png) 
-!["Screenshot of login page"](https://github.com/Nourm9/tweeter/blob/master/docs/tweeter-mobile.png)
+!["Screenshot of Desktop page"](https://github.com/Nourm9/tweeter/blob/master/docs/tweeter-desktop.png) 
+!["Screenshot of Mobile page"](https://github.com/Nourm9/tweeter/blob/master/docs/tweeter-mobile.png)
 
 ## Dependencies
 - Express
