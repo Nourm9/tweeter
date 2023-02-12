@@ -29,6 +29,9 @@ body {
 nav {
   font-family: Bungee;
 }
+#countNum {
+  color: gray;
+}
 
 .parent {
   display: flex;
@@ -53,6 +56,12 @@ nav {
 }
 .new-tweet{
   margin-top:5%;
+}
+.tweet-form > textarea {
+  border: 5px solid grey;
+  box-shadow: 5px 5px gray;
+  height:15vh;
+  width: 40vw;
 }
 .tweet-container {
   display: flex;
@@ -94,7 +103,7 @@ nav {
 .tweet-container > article button {
   color: #4056a1;
   border: none;
-  width: 3vw;
+  width: 3.2vw;
   background: none;
 }
 
@@ -136,19 +145,24 @@ nav {
     margin-top: 0%;
   }
   .tweet-container {
+    width: fit-content;
     margin: 5% 0% 10% 15%;
     width: 120vh;
   }
  .tweet-form-header{
+  
   margin-top:15%;
-  margin-left:50%
+  margin-left:15%
 }
-.tweet-form > textarea {
-  height:25vh;
-  width: 50vw;
+
+.tweet-name-img {
+  display: flex;
+  flex-direction: column;
 }
 .error{
   margin-top:5%;
+  color:red;
+  border:5px solid red;
 }
 }
 
@@ -210,6 +224,7 @@ nav {
   box-shadow: 5px 5px #5451497e;
 }
 .tweet-form-header{
+  
   margin-top:25%;
   margin-left:25%
 }

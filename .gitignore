@@ -1,3 +1,5 @@
 node_modules/
 .env
 .DS_Store
+.github
+tweeter/public/vendor/jquery-2.2.3.min.js
