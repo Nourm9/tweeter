@@ -8,6 +8,6 @@ $(document).ready(function () {
       $("#countNum").css("color", "red");
     } else {
       $("#countNum").css("color", "gray")
-    }
+    };
   });
 });
