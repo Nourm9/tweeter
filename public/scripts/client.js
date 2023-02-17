@@ -18,7 +18,7 @@ const onSubmit = function (event) {
   const errorMssg2 =
     "You wrote too much. Please keep your characters under 140.";
 
-  console.log($("#count"));
+
   if (textValue === null || textValue === "") {
     $(".error")
       .html(
@@ -57,7 +57,7 @@ const createTweetElement = (data) => {
   const safeHTML = `<p>${escape(data.content.text)}</p>`;
   // generates tweet data for outputed tweets section
   const $tweet = $(`
-     <article class = "tweet-article">
+     <article class="tweet-article">
     <header class="tweet-header"> 
     <div class="tweet-name-img"> 
       <span class="tweet-avatar"><img src="${data.user.avatars}" alt=""></span>
@@ -66,8 +66,8 @@ const createTweetElement = (data) => {
       <span class="tweet-handle">${data.user.handle}</span>
     </header>
     <p class="text-field">${safeHTML}</p>
-  <footer class="tweet-footer">
-    <span class="tweet-date">${data.user.created_at}</span> 
+  <footer class="tweet-footer" style:"border: 1px solid blue;">
+    <span class="tweet-date" >${timeago.format(data.created_at)}</span> 
     <span>
       <button><i class="fa-solid fa-flag"></i> </button>
       <button><i class="fa-solid fa-retweet"></i></button>
@@ -99,7 +99,7 @@ const loadTweets = () => {
     url: "/tweets",
     data: JSON,
   }).then((data) => {
-    // it will remove the tweet container object elements and before rendwering new tweets
+    // will remove tweet container object elements and before rendering new tweets
     $(".tweet-article").remove();
 
     renderTweets(data);

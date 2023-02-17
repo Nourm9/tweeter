@@ -57,55 +57,51 @@
       <nav class="nav-container">
         <span>tweeter</span>
         <div class="sub-container">
-        <span>Write a tweet.</span>
-        <i class="fa-solid fa-angles-down"></i>
-      </div>
-    </nav>
+          <span>Write a tweet.</span>
+          <i class="fa-solid fa-angles-down"></i>
+        </div>
+      </nav>
+    </div>
 
-    
-  </div>
-    
     <!-- Page-specific (main) content here -->
     <main class="container">
       <header>
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div>
+          <h2>Nour Mohamoud</h2>
+        </div>
+      </header>
       <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Nour Mohamoud</h2>
-      </div>
-    </header>
-    <div>
-
-      <p class="error" visible="false">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </p>
-      <section class="new-tweet" id="new-tweet">
-        <h2 class="tweet-form-header">Compose Tweet</h2>
-        <form
-        class="tweet-form"
-        id="tweet-formID"
-          method="post"
-          action="/tweets"
+        <p class="error" visible="false">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </p>
+        <section class="new-tweet" id="new-tweet">
+          <h2 class="tweet-form-header">Compose Tweet</h2>
+          <form
+            class="tweet-form"
+            id="tweet-formID"
+            method="post"
+            action="/tweets"
           >
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" class="text" id="count"></textarea>
-          <div class="tweet-form-bottom">
-            <button type="submit" id="tweet-button">Tweet</button>
-            <output
-              name="counter"
-              class="counter"
-              id="countNum"
-              for="tweet-text"
-              >140</output
-            >
-          </div>
-        </form>
-      </section>
-      <section class="tweet-container"></section>
-    </div>
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" class="text" id="count"></textarea>
+            <div class="tweet-form-bottom">
+              <button type="submit" id="tweet-button">Tweet</button>
+              <output
+                name="counter"
+                class="counter"
+                id="countNum"
+                for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+        <section class="tweet-container"></section>
+      </div>
     </main>
   </body>
-  </html>
-  
+</html>

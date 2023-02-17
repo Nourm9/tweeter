@@ -7,7 +7,7 @@ nav{
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
-  height: 10vh;
+  height: 120px;
   width:100vw;
   background-color: #4057a1fd;
   color: #ffffff;
